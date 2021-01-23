@@ -19,4 +19,6 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_down"):
 		velocity.y += speed
 		
-	move_and_slide(velocity, Vector2.UP)
+	var collision = move_and_slide(velocity, Vector2.UP)
+	
+	print(collision)
