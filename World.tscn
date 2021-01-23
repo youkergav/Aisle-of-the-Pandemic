@@ -8,14 +8,10 @@
 [node name="World" type="Node2D"]
 
 [node name="Map" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0.594604, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-
-[node name="Box" parent="." instance=ExtResource( 2 )]
-position = Vector2( 203.268, 34.0043 )
-
-[node name="CollisionShape2D" parent="Box" index="0"]
-position = Vector2( 256.12, 17.2796 )
+position = Vector2( 174.385, 67.1752 )
 
 [node name="Box2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 203.268, 34.0043 )
@@ -64,8 +60,6 @@ position = Vector2( 61.996, 46.9256 )
 
 [node name="CollisionShape2D" parent="Cash Register3" index="0"]
 position = Vector2( 39, 278 )
-
-[editable path="Box"]
 
 [editable path="Box2"]
 
