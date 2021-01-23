@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Characters/player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/aisle/aisle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Maps/level1/level1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/cashRegister/cashRegister.tscn" type="PackedScene" id=4]
+
+[node name="World" type="Node2D"]
+
+[node name="Map" parent="." instance=ExtResource( 3 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+
+[node name="Box" parent="." instance=ExtResource( 2 )]
+position = Vector2( 203.268, 34.0043 )
+
+[node name="CollisionShape2D" parent="Box" index="0"]
+position = Vector2( 256.12, 17.2796 )
+
+[node name="Box2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 203.268, 34.0043 )
+
+[node name="CollisionShape2D" parent="Box2" index="0"]
+position = Vector2( 256.12, 80.9192 )
+
+[node name="Box3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 203.268, 34.0043 )
+
+[node name="CollisionShape2D" parent="Box3" index="0"]
+position = Vector2( 256.12, 143.852 )
+
+[node name="Box4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 203.268, 34.0043 )
+
+[node name="CollisionShape2D" parent="Box4" index="0"]
+position = Vector2( 258.241, 207.491 )
+
+[node name="Box5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 203.268, 34.0043 )
+
+[node name="CollisionShape2D" parent="Box5" index="0"]
+position = Vector2( 259.655, 275.374 )
+
+[node name="Box6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 203.268, 34.0043 )
+
+[node name="CollisionShape2D" parent="Box6" index="0"]
+position = Vector2( 260.362, 337.599 )
+
+[node name="Cash Register" parent="." instance=ExtResource( 4 )]
+position = Vector2( 61.996, 46.9256 )
+
+[node name="CollisionShape2D" parent="Cash Register" index="0"]
+position = Vector2( 36.5, 27 )
+
+[node name="Cash Register2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 61.996, 46.9256 )
+
+[node name="CollisionShape2D" parent="Cash Register2" index="0"]
+position = Vector2( 36, 159.5 )
+
+[node name="Cash Register3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 61.996, 46.9256 )
+
+[node name="CollisionShape2D" parent="Cash Register3" index="0"]
+position = Vector2( 39, 278 )
+
+[editable path="Box"]
+
+[editable path="Box2"]
+
+[editable path="Box3"]
+
+[editable path="Box4"]
+
+[editable path="Box5"]
+
+[editable path="Box6"]
+
+[editable path="Cash Register"]
+
+[editable path="Cash Register2"]
+
+[editable path="Cash Register3"]
