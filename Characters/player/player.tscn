@@ -165,6 +165,11 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="Shadow" type="Sprite" parent="."]
+vframes = 8
+hframes = 12
+frame = 25
+
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 vframes = 8
