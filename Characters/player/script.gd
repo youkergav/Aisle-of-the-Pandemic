@@ -25,6 +25,7 @@ func walk():
         velocity.y += speed
     
     var collision = move_and_slide(velocity, Vector2.UP)
+    print(collision)
     
 func idle():
     if Input.is_action_just_released("move_left"):
@@ -48,13 +49,13 @@ func _physics_process(delta):
     idle()
     spin()
 
-#func _on_timeout():
-#    var shadow = preload("res://Lighting/Shadow/Shadow.tscn")
-#    get_parent().add_child(shadow)
-#
-#    var player_frame = $Player/Sprite.frame
-#    var offset = player_frame * .100
-#
-#    print(offset)
-#    shadow.position = position
-#    # shadow.texture = ??????????????
+func _ready():
+    $Shadow.hframes = $Sprite.hframes
+    $Shadow.vframes = $Sprite.vframes
+    $Shadow.texture = $Sprite.texture
+    $Shadow.position = Vector2 (-10, -10)
+    $Shadow.modulate = Color(0, 0, 0, .5)
+    $Shadow.scale = Vector2(1.15, 1.15)
+
+func _on_timeout():    
+    $Shadow.frame = $Sprite.frame
