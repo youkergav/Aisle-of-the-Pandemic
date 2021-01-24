@@ -165,7 +165,9 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Shadow" type="Sprite" parent="."]
+[node name="Shadow" type="KinematicBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Shadow"]
 vframes = 8
 hframes = 12
 frame = 25
@@ -194,8 +196,3 @@ anims/WalkDown = SubResource( 7 )
 anims/WalkLeft = SubResource( 8 )
 anims/WalkRight = SubResource( 9 )
 anims/WalkUp = SubResource( 10 )
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.1
-autostart = true
-[connection signal="timeout" from="Timer" to="." method="_on_timeout"]

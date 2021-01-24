@@ -72,6 +72,14 @@ func roll_for_direction(last_position, last_direction):
 
     return current_direction
 
+func gen_shadow():
+    $Shadow/Sprite.hframes = $Sprite.hframes
+    $Shadow/Sprite.vframes = $Sprite.vframes
+    $Shadow/Sprite.texture = $Sprite.texture
+    $Shadow/Sprite.position = Vector2 (-10, -10)
+    $Shadow/Sprite.modulate = Color(0, 0, 0, .5)
+    $Shadow/Sprite.scale = Vector2(1.15, 1.15)
+
 func _physics_process(delta):
 
     # Only proceed with physics once in a while
@@ -102,3 +110,6 @@ func _physics_process(delta):
         move_and_slide(velocity, Vector2.UP)
 
         # print("NPC Position: " + str(last_position))
+        
+func _ready():
+    gen_shadow()
