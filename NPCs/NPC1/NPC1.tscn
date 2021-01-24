@@ -97,3 +97,4 @@ anims/WalkDown = SubResource( 2 )
 anims/WalkLeft = SubResource( 3 )
 anims/WalkRight = SubResource( 4 )
 anims/WalkUp = SubResource( 5 )
+[connection signal="infect" from="Stats" to="." method="_on_Stats_infect"]

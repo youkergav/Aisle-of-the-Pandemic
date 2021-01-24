@@ -8,7 +8,7 @@ func spawn_npc(NPCObject: PackedScene, spawnPosition: Vector2, infected: bool):
     add_child(NPC)
     
     NPC.position = spawnPosition
-    NPC.get_node("Stats").infected = infected
+    NPC.get_node("Stats").isInfected = infected
 
 func _ready():
     spawn_npc(NPC1, Vector2(175, 200), true)

@@ -36,11 +36,12 @@ func _physics_process(delta):
 
 func _on_area_entered(area):
     var ParentStats: Node = Parent.get_node("Stats")
-    var infected = ParentStats.infected
-    
-    if infected:
-        print("Infection!")
+    var StrangerStats: Node = area.get_parent().get_node("Stats")
         
+    if StrangerStats.isInfected:
+        ParentStats.isInfected = true
+        
+    print(StrangerStats.isInfected)
     $Sprite.modulate = Color(1, 0, 0, .5)
 
 func _on_area_exited(area):

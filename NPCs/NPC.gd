@@ -120,3 +120,7 @@ func _physics_process(delta):
         
 func _ready():
     gen_shadow()
+
+
+func _on_Stats_infect():
+    queue_free()
