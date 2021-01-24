@@ -10,59 +10,178 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="rows" type="VBoxContainer" parent="."]
 margin_right = 284.0
-margin_bottom = 50.0
+margin_bottom = 176.0
 
-[node name="TODO1" type="HBoxContainer" parent="VBoxContainer"]
+[node name="rice_ball" type="HBoxContainer" parent="rows"]
 margin_right = 284.0
 margin_bottom = 14.0
 
-[node name="Status" type="Label" parent="VBoxContainer/TODO1"]
-margin_right = 25.0
+[node name="status" type="Label" parent="rows/rice_ball"]
+margin_right = 29.0
 margin_bottom = 14.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "- [ ] "
+text = "- [  ] "
 
-[node name="Label" type="Label" parent="VBoxContainer/TODO1"]
-margin_left = 29.0
-margin_right = 85.0
+[node name="label" type="Label" parent="rows/rice_ball"]
+margin_left = 33.0
+margin_right = 87.0
 margin_bottom = 14.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Bat Soup"
+text = "Rice ball"
 
-[node name="TODO2" type="HBoxContainer" parent="VBoxContainer"]
+[node name="soup" type="HBoxContainer" parent="rows"]
 margin_top = 18.0
 margin_right = 284.0
 margin_bottom = 32.0
 
-[node name="Status" type="Label" parent="VBoxContainer/TODO2"]
-margin_right = 25.0
+[node name="status" type="Label" parent="rows/soup"]
+margin_right = 29.0
 margin_bottom = 14.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "- [ ] "
+text = "- [  ] "
 
-[node name="Label" type="Label" parent="VBoxContainer/TODO2"]
-margin_left = 29.0
-margin_right = 97.0
+[node name="label" type="Label" parent="rows/soup"]
+margin_left = 33.0
+margin_right = 89.0
 margin_bottom = 14.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "More Soup"
+text = "Bat Soup"
 
-[node name="TODO3" type="HBoxContainer" parent="VBoxContainer"]
+[node name="milk" type="HBoxContainer" parent="rows"]
 margin_top = 36.0
 margin_right = 284.0
 margin_bottom = 50.0
 
-[node name="Status" type="Label" parent="VBoxContainer/TODO3"]
-margin_right = 25.0
+[node name="status" type="Label" parent="rows/milk"]
+margin_right = 29.0
 margin_bottom = 14.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "- [ ] "
+text = "- [  ] "
 
-[node name="Label" type="Label" parent="VBoxContainer/TODO3"]
-margin_left = 29.0
-margin_right = 108.0
+[node name="label" type="Label" parent="rows/milk"]
+margin_left = 33.0
+margin_right = 60.0
 margin_bottom = 14.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "A third thing"
+text = "Milk"
+
+[node name="bread" type="HBoxContainer" parent="rows"]
+margin_top = 54.0
+margin_right = 284.0
+margin_bottom = 68.0
+
+[node name="status" type="Label" parent="rows/bread"]
+margin_right = 29.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- [  ] "
+
+[node name="label" type="Label" parent="rows/bread"]
+margin_left = 33.0
+margin_right = 70.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Bread"
+
+[node name="popcorn" type="HBoxContainer" parent="rows"]
+margin_top = 72.0
+margin_right = 284.0
+margin_bottom = 86.0
+
+[node name="status" type="Label" parent="rows/popcorn"]
+margin_right = 29.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- [  ] "
+
+[node name="label" type="Label" parent="rows/popcorn"]
+margin_left = 33.0
+margin_right = 85.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Popcorn"
+
+[node name="pie" type="HBoxContainer" parent="rows"]
+margin_top = 90.0
+margin_right = 284.0
+margin_bottom = 104.0
+
+[node name="status" type="Label" parent="rows/pie"]
+margin_right = 29.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- [  ] "
+
+[node name="label" type="Label" parent="rows/pie"]
+margin_left = 33.0
+margin_right = 53.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Pie"
+
+[node name="cupcake" type="HBoxContainer" parent="rows"]
+margin_top = 108.0
+margin_right = 284.0
+margin_bottom = 122.0
+
+[node name="status" type="Label" parent="rows/cupcake"]
+margin_right = 29.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- [  ] "
+
+[node name="label" type="Label" parent="rows/cupcake"]
+margin_left = 33.0
+margin_right = 86.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Cupcake"
+
+[node name="popsicle" type="HBoxContainer" parent="rows"]
+margin_top = 126.0
+margin_right = 284.0
+margin_bottom = 140.0
+
+[node name="status" type="Label" parent="rows/popsicle"]
+margin_right = 29.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- [  ] "
+
+[node name="label" type="Label" parent="rows/popsicle"]
+margin_left = 33.0
+margin_right = 94.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Popsicles"
+
+[node name="hline" type="HBoxContainer" parent="rows"]
+margin_top = 144.0
+margin_right = 284.0
+margin_bottom = 158.0
+
+[node name="label" type="Label" parent="rows/hline"]
+margin_right = 95.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-------------------"
+
+[node name="checkout" type="HBoxContainer" parent="rows"]
+margin_top = 162.0
+margin_right = 284.0
+margin_bottom = 176.0
+
+[node name="status" type="Label" parent="rows/checkout"]
+margin_right = 29.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- [  ] "
+
+[node name="label" type="Label" parent="rows/checkout"]
+margin_left = 33.0
+margin_right = 92.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Checkout"

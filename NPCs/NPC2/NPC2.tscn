@@ -80,7 +80,6 @@ tracks/0/keys = {
 script = ExtResource( 1 )
 
 [node name="Stats" parent="." instance=ExtResource( 4 )]
-infected = true
 
 [node name="Shadow" parent="." instance=ExtResource( 2 )]
 

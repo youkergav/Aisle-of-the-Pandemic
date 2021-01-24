@@ -35,7 +35,6 @@ func _physics_process(delta):
     update_sprite()
 
 func _on_area_entered(area):
-    var ParentStats: Node = Parent.get_node("Stats")
     var StrangerStats: Node = area.get_parent().get_node("Stats")
         
     if StrangerStats.isInfected:
