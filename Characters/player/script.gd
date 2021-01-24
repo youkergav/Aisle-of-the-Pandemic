@@ -24,8 +24,8 @@ func walk():
         animation.play("WalkDown")
         velocity.y += speed
     
-    var collision = move_and_slide(velocity, Vector2.UP)
-    print(collision)
+    move_and_slide(velocity, Vector2.UP)
+    $Shadow/Sprite.frame = $Sprite.frame
     
 func idle():
     if Input.is_action_just_released("move_left"):
@@ -44,6 +44,11 @@ func spin():
     if Input.is_action_just_released("spin"): 
         animation.play("Spin")
     
+func _physics_process(delta):
+    walk()
+    idle()
+    spin()
+    
 func gen_shadow():
     $Shadow/Sprite.hframes = $Sprite.hframes
     $Shadow/Sprite.vframes = $Sprite.vframes
@@ -51,11 +56,6 @@ func gen_shadow():
     $Shadow/Sprite.position = Vector2 (-10, -10)
     $Shadow/Sprite.modulate = Color(0, 0, 0, .5)
     $Shadow/Sprite.scale = Vector2(1.15, 1.15)
-
-func _physics_process(delta):
-    walk()
-    idle()
-    spin()
 
 func _ready():
     gen_shadow()

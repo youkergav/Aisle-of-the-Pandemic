@@ -108,6 +108,7 @@ func _physics_process(delta):
             velocity.y += speed
 
         move_and_slide(velocity, Vector2.UP)
+        $Shadow/Sprite.frame = $Sprite.frame
 
         # print("NPC Position: " + str(last_position))
         
