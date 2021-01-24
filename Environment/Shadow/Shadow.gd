@@ -39,7 +39,7 @@ func _on_area_entered(area):
     var StrangerStats: Node = area.get_parent().get_node("Stats")
         
     if StrangerStats.isInfected:
-        ParentStats.isInfected = true
+        get_parent().get_node("Stats").isInfected = true
         
     print(StrangerStats.isInfected)
     $Sprite.modulate = Color(1, 0, 0, .5)
