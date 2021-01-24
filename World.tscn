@@ -1,14 +1,24 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/aisle/aisle.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Map/Map.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/cashRegister/cashRegister.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Items/CowJuice.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Items/Doughnutte.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Items/Pancakes.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Items/Soup.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Items/UnslicedBread.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Items/Borgor.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Items/HotDiggityDog.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Items/BrockFood.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Items/MexicanHotDog.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Items/Popptart.tscn" type="PackedScene" id=14]
 
 [node name="World" type="Node2D"]
 
 [node name="Map" parent="." instance=ExtResource( 3 )]
-position = Vector2( -4.76837e-07, 0 )
+position = Vector2( 1, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 327.601, 71.1038 )
@@ -60,6 +70,40 @@ position = Vector2( 61.996, 46.9256 )
 
 [node name="CollisionShape2D" parent="Cash Register3" index="0"]
 position = Vector2( 39, 278 )
+
+[node name="Node2D" parent="." instance=ExtResource( 9 )]
+position = Vector2( 242, 116 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Node4D" parent="." instance=ExtResource( 7 )]
+position = Vector2( 336.423, 115.5 )
+scale = Vector2( 0.553846, 0.553846 )
+
+[node name="Node2D" parent="Node4D" instance=ExtResource( 6 )]
+position = Vector2( -116.32, 345.764 )
+
+[node name="Node2D" parent="Node4D/Node2D" instance=ExtResource( 11 )]
+position = Vector2( 483.889, -348.472 )
+
+[node name="Node2D2" parent="Node4D/Node2D" instance=ExtResource( 10 )]
+position = Vector2( 240.139, -119.167 )
+
+[node name="Node2D3" parent="Node4D/Node2D" instance=ExtResource( 13 )]
+position = Vector2( 530.833, 3.61115 )
+
+[node name="Node2D4" parent="Node4D/Node2D" instance=ExtResource( 12 )]
+position = Vector2( 653.611, -234.722 )
+
+[node name="Node2D5" parent="Node4D/Node2D" instance=ExtResource( 5 )]
+position = Vector2( 223.889, 119.167 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 326.308, 178.5 )
+scale = Vector2( 0.553846, 0.553846 )
+
+[node name="Node2D3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 238.333, 242.642 )
+scale = Vector2( 0.123822, 0.123822 )
 
 [editable path="Box2"]
 
