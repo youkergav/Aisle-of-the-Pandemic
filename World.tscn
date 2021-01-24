@@ -4,12 +4,13 @@
 [ext_resource path="res://Objects/aisle/aisle.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Maps/level1/level1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/cashRegister/cashRegister.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Characters/npc/npc.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Maps/level1/level1.gd" type="Script" id=5]
 
 [node name="World" type="Node2D"]
 
 [node name="Map" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0.594604, 0 )
+script = ExtResource( 5 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 174.385, 67.1752 )
@@ -61,36 +62,6 @@ position = Vector2( 61.996, 46.9256 )
 
 [node name="CollisionShape2D" parent="Cash Register3" index="0"]
 position = Vector2( 39, 278 )
-
-[node name="npc" parent="." instance=ExtResource( 5 )]
-position = Vector2( 29.2601, 139.221 )
-
-[node name="npc7" parent="." instance=ExtResource( 5 )]
-position = Vector2( 43.5629, 387.136 )
-
-[node name="npc8" parent="." instance=ExtResource( 5 )]
-position = Vector2( 408.548, 337.871 )
-
-[node name="npc9" parent="." instance=ExtResource( 5 )]
-position = Vector2( 175.466, 327.276 )
-
-[node name="npc10" parent="." instance=ExtResource( 5 )]
-position = Vector2( 546.465, 143.491 )
-
-[node name="npc2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 343.57, 208.124 )
-
-[node name="npc3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 721.12, 274.667 )
-
-[node name="npc4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 93.4436, 265.229 )
-
-[node name="npc5" parent="." instance=ExtResource( 5 )]
-position = Vector2( 185.471, 84.9487 )
-
-[node name="npc6" parent="." instance=ExtResource( 5 )]
-position = Vector2( 635.699, 20.2933 )
 
 [editable path="Box2"]
 

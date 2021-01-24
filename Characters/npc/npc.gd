@@ -11,6 +11,8 @@ var slow_multiple: int = 3
 # % chance that an npc will continue in current direction
 var momentum_bias: int = 95
 
+onready var animation = $AnimationPlayer
+
 # Want characters to keep moving forward as long as they don't collide
 # Check if the character collided by seeing if they moved since the last delta
 # Log position during each _physic_process() call
@@ -88,15 +90,19 @@ func _physics_process(delta):
         last_position = position
 
         if current_direction == "left":
+            animation.play("WalkLeft")
             velocity.x -= speed
 
         if current_direction == "right":
+            animation.play("WalkRight")
             velocity.x += speed
 
         if current_direction == "up":
+            animation.play("WalkUp")
             velocity.y -= speed
 
         if current_direction == "down":
+            animation.play("WalkDown")
             velocity.y += speed
 
         move_and_slide(velocity, Vector2.UP)

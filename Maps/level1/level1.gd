@@ -15,10 +15,7 @@ func spawn_npc(npc_no, x, y):
 # Called when the node enters the scene tree for the first time.
 func _ready():
 
-    spawn_npc(2, 175, 100)
-    spawn_npc(2, 175, 150)
     spawn_npc(2, 175, 200)
-    spawn_npc(2, 175, 250)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
