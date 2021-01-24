@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Test 001"
+config/name="Aisle of the Pandemic"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/texture.png-96ffd3a5b8bbe3effab57faed2d119a5.stex"
+path="res://.import/NPC.png-84402c19aade55037f0758ce03f44466.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/player/texture.png"
-dest_files=[ "res://.import/texture.png-96ffd3a5b8bbe3effab57faed2d119a5.stex" ]
+source_file="res://NPCs/NPC.png"
+dest_files=[ "res://.import/NPC.png-84402c19aade55037f0758ce03f44466.stex" ]
 
 [params]
 

@@ -1,5 +1,0 @@
-[gd_scene format=2]
-
-[node name="Shadow" type="Sprite"]
-
-[node name="Alpha" type="Tween" parent="."]
