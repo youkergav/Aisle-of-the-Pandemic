@@ -1,0 +1,68 @@
+[gd_scene format=2]
+
+[node name="GUI" type="MarginContainer"]
+anchor_right = 1.0
+margin_left = 20.0
+margin_top = 6.0
+margin_right = -431.0
+margin_bottom = 35.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 284.0
+margin_bottom = 50.0
+
+[node name="TODO1" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 284.0
+margin_bottom = 14.0
+
+[node name="Status" type="Label" parent="VBoxContainer/TODO1"]
+margin_right = 25.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- [ ] "
+
+[node name="Label" type="Label" parent="VBoxContainer/TODO1"]
+margin_left = 29.0
+margin_right = 85.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Bat Soup"
+
+[node name="TODO2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 284.0
+margin_bottom = 32.0
+
+[node name="Status" type="Label" parent="VBoxContainer/TODO2"]
+margin_right = 25.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- [ ] "
+
+[node name="Label" type="Label" parent="VBoxContainer/TODO2"]
+margin_left = 29.0
+margin_right = 97.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "More Soup"
+
+[node name="TODO3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 36.0
+margin_right = 284.0
+margin_bottom = 50.0
+
+[node name="Status" type="Label" parent="VBoxContainer/TODO3"]
+margin_right = 25.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- [ ] "
+
+[node name="Label" type="Label" parent="VBoxContainer/TODO3"]
+margin_left = 29.0
+margin_right = 108.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "A third thing"

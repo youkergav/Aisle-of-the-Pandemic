@@ -4,13 +4,12 @@
 [ext_resource path="res://Objects/aisle/aisle.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Map/Map.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/cashRegister/cashRegister.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Map/Map.gd" type="Script" id=5]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Node2D"]
 
 [node name="Map" parent="." instance=ExtResource( 3 )]
 position = Vector2( -4.76837e-07, 0 )
-script = ExtResource( 5 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 327.601, 71.1038 )
@@ -62,6 +61,8 @@ position = Vector2( 61.996, 46.9256 )
 
 [node name="CollisionShape2D" parent="Cash Register3" index="0"]
 position = Vector2( 39, 278 )
+
+[node name="GUI" parent="." instance=ExtResource( 5 )]
 
 [editable path="Box2"]
 
