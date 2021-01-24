@@ -3,10 +3,11 @@ extends Area2D
 var offset: Vector2 = Vector2(-10, -10)
 var upscale: float = 1.15
 var defaultColor: Color = Color(0, 0, 0, .5)
-onready var ParentSprite: Sprite = get_parent().get_node("Sprite")
-onready var ParentCollisionBox: CollisionShape2D = get_parent().get_node("CollisionBox")
+onready var Parent: KinematicBody2D = get_parent()
 
-func gen_sprite():    
+func gen_sprite():
+    var ParentSprite: Sprite = Parent.get_node("Sprite")
+    
     $Sprite.hframes = ParentSprite.hframes
     $Sprite.vframes = ParentSprite.vframes
     $Sprite.texture = ParentSprite.texture
@@ -15,13 +16,15 @@ func gen_sprite():
     $Sprite.scale = Vector2(upscale, upscale)
     
 func gen_hitbox():
-    var parentScale: Vector2 = ParentCollisionBox.get_transform().get_scale()
+    var ParentCollisionBox: CollisionShape2D = Parent.get_node("CollisionBox")
     
     $Hitbox.shape.height = ParentCollisionBox.get_shape().height * upscale
     $Hitbox.shape.radius = ParentCollisionBox.get_shape().radius * upscale
     $Hitbox.position = $Sprite.position
     
 func update_sprite():
+    var ParentSprite: Sprite = Parent.get_node("Sprite")
+    
     $Sprite.frame = ParentSprite.frame
     
 func _ready():
@@ -32,7 +35,12 @@ func _physics_process(delta):
     update_sprite()
 
 func _on_area_entered(area):
-    print()
+    var ParentStats: Node = Parent.get_node("Stats")
+    var infected = ParentStats.infected
+    
+    if infected:
+        print("Infection!")
+        
     $Sprite.modulate = Color(1, 0, 0, .5)
 
 func _on_area_exited(area):

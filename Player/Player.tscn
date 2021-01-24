@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Environment/Shadow/Shadow.tscn" type="PackedScene" id=2]
 [ext_resource path="res://player/Player.png" type="Texture" id=3]
+[ext_resource path="res://Stats/Stats.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 13.4437
@@ -165,6 +166,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Stats" parent="." instance=ExtResource( 4 )]
 
 [node name="Shadow" parent="." instance=ExtResource( 2 )]
 

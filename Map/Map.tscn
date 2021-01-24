@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Maps/level1/texture.png" type="Texture" id=1]
+[ext_resource path="res://Map/Map.png" type="Texture" id=1]
+[ext_resource path="res://Map/Map.gd" type="Script" id=2]
 
 [sub_resource type="SegmentShape2D" id=1]
 b = Vector2( 734.622, 1.1804 )
@@ -16,6 +17,7 @@ a = Vector2( 732.044, 9.54581 )
 b = Vector2( 0.552273, 412 )
 
 [node name="Map" type="StaticBody2D"]
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 367.33, 207.009 )
